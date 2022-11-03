@@ -30,7 +30,7 @@ useEffect(()=>{
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<HompePage characters={characters}/>}/>
+        <Route path="/home" element={<HompePage characters={characters}/>}/>
         <Route path="/about" element={<About/>}/>
         
       </Routes>
