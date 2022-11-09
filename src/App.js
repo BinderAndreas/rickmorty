@@ -5,6 +5,7 @@ import About from './pages/About';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import HompePage from './pages/HompePage';
 import axios from 'axios';
+import CharacterDetails from './pages/CharacterDetails';
 
 
 
@@ -30,8 +31,9 @@ useEffect(()=>{
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/home" element={<HompePage characters={characters}/>}/>
+        <Route path="/home" element={<HompePage characters={characters} setCharacters={setCharacters}/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/details/:characterId" element={<CharacterDetails/>}/>
         
       </Routes>
     </BrowserRouter>
