@@ -1,16 +1,17 @@
 import React, {useContext} from 'react'
 import '../styles/header.css';
 import {UserContext} from '../contexts/UserContext';
-import {ThemeContext} from '../context/ThemeContext';
+import {ThemeContext} from '../contexts/ThemeContext';
 
 function header() {
 
-const {userName, setUserName}=useContext(UserContext)
+const {userName, setUserName}=useContext(UserContext);
+const {darkMode,setDarkMode}=useContext(ThemeContext);
 
 
 
   return (
-    <div className={darkMode ? 'header-container header-dark' : 'header-container'>
+    <div className={darkMode ? 'header-container header-dark' : 'header-container'}>
         <div>
           <a href="/home">Home</a>
           <a href="/about">About</a>
@@ -24,4 +25,4 @@ const {userName, setUserName}=useContext(UserContext)
   )
 }
 
-export default header
+export default Header
