@@ -7,3 +7,7 @@
     justify-content: space-between;
     color: white;
 }
+
+.header-dark{
+    background-color: black;
+}

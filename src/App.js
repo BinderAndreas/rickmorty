@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import HompePage from './pages/HompePage';
 import axios from 'axios';
 import CharacterDetails from './pages/CharacterDetails';
+import UserContextProvider from './contexts/UserContext';
 
 
 
@@ -29,6 +30,7 @@ useEffect(()=>{
 
   return (
     <BrowserRouter>
+      <UserContextProvider>
       <Header />
       <Routes>
         <Route path="/home" element={<HompePage characters={characters} setCharacters={setCharacters}/>}/>
@@ -36,6 +38,7 @@ useEffect(()=>{
         <Route path="/details/:characterId" element={<CharacterDetails/>}/>
         
       </Routes>
+      </UserContextProvider>
     </BrowserRouter>
   );
 }
